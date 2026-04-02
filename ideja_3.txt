@@ -1,17 +1,22 @@
 Kāds varētu būt projekta nosaukums?
-
+WanderPack
 
 Ko projekts dara vienā teikumā?
-
+Telegram bots, kas skolēnu grupai palīdz organizēt spontānas pastaiges ar maršrutiem, mini-misijām un kopīgiem izaicinājumiem reālajā pasaulē.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+Telegram bots, kas skolēnu grupai palīdz organizēt spontānas pastaiges ar maršrutiem, mini-misijām un kopīgiem izaicinājumiem reālajā pasaulē.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
 
-
+Skolēni vecumā 13–19 gadi, kas dodas pastaigā ar draugiem un meklē strukturētu, jautru pieredzi kopā.
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
 
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
 
+📍 Maršruta ģenerēšana pēc grupas atrašanās vietas un pieejamā laika
+🕵️ Ielu misijas — bots uzdod uzdevumus pa ceļam reāllaikā
+🏆 Punktu sistēma — katrs dalībnieks krāj punktus par izpildītiem uzdevumiem
+🗳️ Grupas balsošana — bots piedāvā 3 vietas, grupa nobalsō kur iet
+📸 Foto izaicinājumi ar AI komentāriem par nosūtītajiem attēliem
