@@ -1,17 +1,22 @@
 Kāds varētu būt projekta nosaukums?
-
+📍 NearBot (vai VietasBot)
 
 Ko projekts dara vienā teikumā?
-
+Telegram bots, kas ar AI palīdzību palīdz lietotājam atrast interesantas vietas tuvumā, meklēt pēc kategorijām un izveidot personalizētus maršrutus.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+ Izklaide un brīvā laika plānošana — cilvēki bieži nezina, ko interesantu var atrast savā apkārtnē, un grūti ātri salikt loģisku maršrutu bez daudzām lietotnēm vienlaikus.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
 
-
+Ikviens — tūristi, vietējie iedzīvotāji, studenti, ģimenes, kas meklē ko darīt brīvdienās.
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
 
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
 
+📡 Vietu meklēšana pēc rādiusa — no 100 m līdz 10 km, pamatojoties uz lietotāja GPS vai manuāli ievadītu adresi
+🔍 Meklēšana pēc kategorijas — kafejnīcas, parki, muzeji, veikali, sporta vietas utt.
+🗺️ Maršruta plānošana — AI sakārto izvēlētās vietas optimālā secībā un parāda to kā maršrutu
+🤖 AI ieteikumi — bots uzdod jautājumus ("Ko tu meklē šodien?") un piedāvā personalizētus ieteikumus
+⭐ Filtri un vērtējumi — filtrēšana pēc atvērts/slēgts, vērtējuma, attāluma, un lietotājs var saglabāt izlases vietas
