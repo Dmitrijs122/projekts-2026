@@ -1,17 +1,21 @@
 Kāds varētu būt projekta nosaukums?
-
+ChillBot (mājas izklaidei)
 
 Ko projekts dara vienā teikumā?
-
+Telegram bots, kas palīdz skolēniem atrast ko darīt mājās — filmas, spēles, izaicinājumus, receptes vai radošas aktivitātes — pamatojoties uz garastāvokli un pieejamo laiku.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+Skolēns sēž mājās, ir garlaicīgi, nezina ko darīt un tērē laiku bezjēdzīgi ritinot TikTok.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
 
-
+ Skolēni vecumā 13–19 gadi, kas mājas apstākļos meklē izklaidi vieni vai ar draugu tiešsaistē.
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
 
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
-
+🎭 AI garastāvokļa analīze — bots jautā kā jūties un iesaka atbilstošu aktivitāti
+🎮 Spēļu ieteikumi pēc žanra un platformas
+🎯 Ikdienas izaicinājumi un mini-spēles tieši botā
+👥 "Spēlē ar draugu" — viktorīnas un izaicinājumi diviem Telegram čatā
+⏱️ Laika filtrs — ieteikumi pēc tā, cik laika ir pieejams
