@@ -19,3 +19,15 @@ Kādas ir 3–5 galvenās funkcijas (must-have)?
 🎯 Ikdienas izaicinājumi un mini-spēles tieši botā
 👥 "Spēlē ar draugu" — viktorīnas un izaicinājumi diviem Telegram čatā
 ⏱️ Laika filtrs — ieteikumi pēc tā, cik laika ir pieejams
+
+
+✅ Funkcionālās prasības (5)
+Bots uzdod lietotājam jautājumus par garastāvokli un pieejamo laiku.
+Sistēma iesaka aktivitātes (filmas, spēles, receptes u.c.) balstoties uz ievadi.
+Lietotājs var saņemt personalizētus spēļu ieteikumus pēc žanra/platformas.
+Bots piedāvā ikdienas izaicinājumus un mini-spēles.
+Lietotāji var spēlēt viktorīnas vai izaicinājumus ar draugiem čatā.
+⚙️ Nefunkcionālās prasības (3)
+Lietotāja interfeisam jābūt vienkāršam un saprotamam (piemērots 13–19 gadiem).
+Sistēmai jādarbojas 24/7 bez būtiskiem pārtraukumiem.
+Ieteikumiem jābūt ģenerētiem mazāk nekā 2 sekunžu laikā.
