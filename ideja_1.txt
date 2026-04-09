@@ -20,3 +20,15 @@ Kādas ir 3–5 galvenās funkcijas (must-have)?
 🗺️ Maršruta plānošana — AI sakārto izvēlētās vietas optimālā secībā un parāda to kā maršrutu
 🤖 AI ieteikumi — bots uzdod jautājumus ("Ko tu meklē šodien?") un piedāvā personalizētus ieteikumus
 ⭐ Filtri un vērtējumi — filtrēšana pēc atvērts/slēgts, vērtējuma, attāluma, un lietotājs var saglabāt izlases vietas
+
+
+✅ Funkcionālās prasības (5)
+Lietotājs var ievadīt savu atrašanās vietu (GPS vai manuāli) un saņemt tuvumā esošas vietas.
+Sistēma ļauj meklēt vietas pēc kategorijām (kafejnīcas, parki, muzeji u.c.).
+Bots ģenerē optimizētu maršrutu starp vairākām izvēlētām vietām.
+Lietotājs var filtrēt rezultātus pēc attāluma, vērtējuma un darba laika.
+Lietotājs var saglabāt vietas “izlasei” un apskatīt tās vēlāk.
+⚙️ Nefunkcionālās prasības (3)
+Atbildes laiks uz pieprasījumu nedrīkst pārsniegt 2–3 sekundes.
+Sistēmai jāspēj apkalpot vairākus lietotājus vienlaikus bez darbības traucējumiem.
+Lietotāja atrašanās vietas dati jāapstrādā droši un netiek saglabāti bez piekrišanas.
