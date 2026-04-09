@@ -20,3 +20,15 @@ Kādas ir 3–5 galvenās funkcijas (must-have)?
 🏆 Punktu sistēma — katrs dalībnieks krāj punktus par izpildītiem uzdevumiem
 🗳️ Grupas balsošana — bots piedāvā 3 vietas, grupa nobalsō kur iet
 📸 Foto izaicinājumi ar AI komentāriem par nosūtītajiem attēliem
+
+
+✅ Funkcionālās prasības (5)
+Bots ģenerē pastaigas maršrutu, balstoties uz grupas atrašanās vietu un laiku.
+Sistēma piedāvā reāllaika uzdevumus (misijas) dažādos maršruta punktos.
+Lietotāji krāj punktus par izpildītiem uzdevumiem.
+Bots ļauj grupai balsot par nākamo galamērķi.
+Lietotāji var nosūtīt foto, un bots sniedz AI ģenerētus komentārus.
+⚙️ Nefunkcionālās prasības (3)
+Sistēmai jāspēj apstrādāt vairākus lietotājus vienā grupā bez aiztures.
+Reāllaika funkcijām jādarbojas ar minimālu kavēšanos (<1–2 sekundes).
+Lietotnes darbībai jābūt stabilai mobilajos tīklos (arī ar vājāku internetu).
