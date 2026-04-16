@@ -33,23 +33,18 @@ Atbildes laiks uz pieprasījumu nedrīkst pārsniegt 2–3 sekundes.
 Sistēmai jāspēj apkalpot vairākus lietotājus vienlaikus bez darbības traucējumiem.
 Lietotāja atrašanās vietas dati jāapstrādā droši un netiek saglabāti bez piekrišanas.
 Cik ļoti aizrauj šī tēma?
-5/5 — ļoti interesanti, spēles tipa projekts, piesaista uzmanību
+3/5 — vairāk praktiska nekā aizraujoša
 
 Cik viegli realizējama?
-2/5 — diezgan grūta (daudz loģikas, eventu, datu struktūru)
+2/5 — sarežģīta (API, lokācija, kartes)
 
 Vai programma ir noderīga/saistoša?
-4/5 — vairāk izklaide, bet ar “domāšanas” vērtību
+5/5 — ļoti noderīga
 
 Vai atbilst vērtēšanas kritērijiem?
-5/5 — ir:
-
-loģika
-datu struktūras
-interaktivitāte
-sarežģītība
+5/5 — tehniski ļoti spēcīgs projekts
 
 Cik efektīgi var nodemonstrēt?
-5/5 — ļoti iespaidīgi (viens no labākajiem demonstrācijas tipiem)
+4/5 — var būt labs, bet jāstrādā ar datiem/API
 
-👉 Kopā: 21/25
+👉 Kopā: 19/25
