@@ -1,34 +1,57 @@
 Kāds varētu būt projekta nosaukums?
-WanderPack
+RealLife Simulator
 
 Ko projekts dara vienā teikumā?
-Telegram bots, kas skolēnu grupai palīdz organizēt spontānas pastaiges ar maršrutiem, mini-misijām un kopīgiem izaicinājumiem reālajā pasaulē.
+Telegram bots, kas simulē cilvēka dzīvi no dzimšanas līdz nāvei, ļaujot lietotājam pieņemt lēmumus, kas ietekmē viņa nākotni.
 
-Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-Telegram bots, kas skolēnu grupai palīdz organizēt spontānas pastaiges ar maršrutiem, mini-misijām un kopīgiem izaicinājumiem reālajā pasaulē.
+Kādu problēmu šis projekts risina?
+Šis projekts ir izklaides un simulācijas rīks, kas palīdz lietotājiem izprast, kā dažādi dzīves lēmumi var ietekmēt nākotni, vienlaikus piedāvājot interaktīvu un aizraujošu pieredzi.
 
-Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
+Kas būs šī rīka galvenais lietotājs?
+Pusaudži un jaunieši (13–19 gadi), kuri interesējas par spēlēm, interaktīviem stāstiem un lēmumu pieņemšanu.
 
-Skolēni vecumā 13–19 gadi, kas dodas pastaigā ar draugiem un meklē strukturētu, jautru pieredzi kopā.
-Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
-
+Kā lietotājs mijiedarbosies ar programmu?
+Lietotājs mijiedarbosies ar Telegram botu, izmantojot čata ziņas un izvēles pogas (InlineKeyboard), kā arī dažos gadījumos ievadot savu tekstu (piemēram, vārdu).
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
 
-📍 Maršruta ģenerēšana pēc grupas atrašanās vietas un pieejamā laika
-🕵️ Ielu misijas — bots uzdod uzdevumus pa ceļam reāllaikā
-🏆 Punktu sistēma — katrs dalībnieks krāj punktus par izpildītiem uzdevumiem
-🗳️ Grupas balsošana — bots piedāvā 3 vietas, grupa nobalsō kur iet
-📸 Foto izaicinājumi ar AI komentāriem par nosūtītajiem attēliem
-
+👶 Dzīves sākums — lietotājs ievada savu vārdu un sāk dzīvi no dzimšanas
+🔄 Lēmumu sistēma — katrā dzīves posmā lietotājs izvēlas darbības (piemēram, runāt, ignorēt, mācīties, strādāt)
+📊 Statistikas sistēma — tiek sekots līdzi rādītājiem (nauda, veselība, laime, sociālās attiecības)
+🎭 Nejauši notikumi — bots ģenerē dažādas dzīves situācijas (skola, darbs, attiecības)
+📜 Dzīves kopsavilkums — spēles beigās bots izveido unikālu lietotāja dzīves stāstu
 
 ✅ Funkcionālās prasības (5)
-Bots ģenerē pastaigas maršrutu, balstoties uz grupas atrašanās vietu un laiku.
-Sistēma piedāvā reāllaika uzdevumus (misijas) dažādos maršruta punktos.
-Lietotāji krāj punktus par izpildītiem uzdevumiem.
-Bots ļauj grupai balsot par nākamo galamērķi.
-Lietotāji var nosūtīt foto, un bots sniedz AI ģenerētus komentārus.
+
+Sistēma ļauj lietotājam ievadīt sākuma informāciju (piemēram, vārdu).
+Bots ģenerē dažādus dzīves notikumus, balstoties uz lietotāja vecumu un iepriekšējiem lēmumiem.
+Lietotājs var izvēlēties starp vairākām darbībām katrā situācijā.
+Sistēma saglabā lietotāja progresu un statistiku (piemēram, vecumu, naudu, laimi).
+Spēles beigās sistēma ģenerē lietotāja dzīves kopsavilkumu.
+
 ⚙️ Nefunkcionālās prasības (3)
-Sistēmai jāspēj apstrādāt vairākus lietotājus vienā grupā bez aiztures.
-Reāllaika funkcijām jādarbojas ar minimālu kavēšanos (<1–2 sekundes).
-Lietotnes darbībai jābūt stabilai mobilajos tīklos (arī ar vājāku internetu).
+
+Sistēmai jādarbojas ātri un bez aiztures, nodrošinot atbildes 1–2 sekunžu laikā.
+Botam jāspēj apstrādāt vairākus lietotājus vienlaicīgi.
+Datu saglabāšanai jābūt stabilai un drošai (izmantojot JSON vai līdzīgu formātu).
+Cik ļoti aizrauj šī tēma?
+5/5 — ļoti interesanti, spēles tipa projekts, piesaista uzmanību
+
+Cik viegli realizējama?
+2/5 — diezgan grūta (daudz loģikas, eventu, datu struktūru)
+
+Vai programma ir noderīga/saistoša?
+4/5 — vairāk izklaide, bet ar “domāšanas” vērtību
+
+Vai atbilst vērtēšanas kritērijiem?
+5/5 — ir:
+
+loģika
+datu struktūras
+interaktivitāte
+sarežģītība
+
+Cik efektīgi var nodemonstrēt?
+5/5 — ļoti iespaidīgi (viens no labākajiem demonstrācijas tipiem)
+
+👉 Kopā: 21/25
