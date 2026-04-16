@@ -31,3 +31,19 @@ Lietotāji var spēlēt viktorīnas vai izaicinājumus ar draugiem čatā.
 Lietotāja interfeisam jābūt vienkāršam un saprotamam (piemērots 13–19 gadiem).
 Sistēmai jādarbojas 24/7 bez būtiskiem pārtraukumiem.
 Ieteikumiem jābūt ģenerētiem mazāk nekā 2 sekunžu laikā.
+Cik ļoti aizrauj šī tēma?
+3/5 — interesanti, bet diezgan “parasti”
+
+Cik viegli realizējama?
+5/5 — ļoti viegli
+
+Vai programma ir noderīga/saistoša?
+5/5 — reāli izmantojama ikdienā
+
+Vai atbilst vērtēšanas kritērijiem?
+3/5 — var pietrūkt “dziļuma” (skolotājs var gribēt vairāk loģikas)
+
+Cik efektīgi var nodemonstrēt?
+3/5 — demonstrācija būs vienkārša, bet ne īpaši iespaidīga
+
+👉 Kopā: 19/25
