@@ -55,3 +55,40 @@ Cik efektīgi var nodemonstrēt?
 5/5 — ļoti iespaidīgi (viens no labākajiem demonstrācijas tipiem)
 
 👉 Kopā: 21/25
+1. BitLife
+📱 Kā tas strādā:
+Teksta veida dzīves simulators
+Sākas ar piedzimšanu
+Lietotājs izvēlas darbības (skola, darbs, attiecības)
+Katra izvēle ietekmē dzīvi
+
+👉 Ļoti līdzīgs tavai idejai
+
+✅ Plusi:
+Ļoti vienkāršs un saprotams interfeiss
+Daudz izvēļu un nejaušu notikumu
+Augsta “replay value” (vari spēlēt daudzas reizes)
+Aizraujošs un ātrs gameplay
+❌ Mīnusi:
+Daudzas funkcijas ir aiz maksas (paywall)
+Daudz reklāmu, kas traucē spēlēšanu
+Spēle var kļūt vienveidīga pēc laika
+Ierobežota personalizācija
+🧠 Lietojamība:
+Ļoti viegli lietot
+Piemērots mobilajām ierīcēm
+Intuitīvs (nav jāmācās)
+2. AltLife
+📱 Kā tas strādā:
+Teksta dzīves simulators līdzīgs BitLife
+Vairāk fokuss uz karjeru, attiecībām un finansēm
+✅ Plusi:
+Dziļāka ekonomikas un karjeras sistēma
+Daudz dažādu dzīves scenāriju
+Lielāka brīvība izvēlēs
+Mazāk agresīva monetizācija
+❌ Mīnusi:
+Mazāk populārs → mazāk funkciju/atjauninājumu
+Dažreiz mazāk polished (vienkāršāks dizains)
+Mazāk satura nekā konkurentiem
+
