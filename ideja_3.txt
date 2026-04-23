@@ -1,97 +1,126 @@
-Kāds varētu būt projekta nosaukums?
-RealLife Simulator
+🕵️ Projekta apraksts (Detektīva spēle)
+📌 Kāds varētu būt projekta nosaukums?
 
-Ko projekts dara vienā teikumā?
-Telegram bots, kas simulē cilvēka dzīvi no dzimšanas līdz nāvei, ļaujot lietotājam pieņemt lēmumus, kas ietekmē viņa nākotni.
+CrimeQuest: Digital Detective
+(alternatīvas: MysteryBot, Case Solver, Detective Stories)
 
-Kādu problēmu šis projekts risina?
-Šis projekts ir izklaides un simulācijas rīks, kas palīdz lietotājiem izprast, kā dažādi dzīves lēmumi var ietekmēt nākotni, vienlaikus piedāvājot interaktīvu un aizraujošu pieredzi.
+📌 Ko projekts dara vienā teikumā?
 
-Kas būs šī rīka galvenais lietotājs?
-Pusaudži un jaunieši (13–19 gadi), kuri interesējas par spēlēm, interaktīviem stāstiem un lēmumu pieņemšanu.
+Telegram bots, kas piedāvā interaktīvas detektīva lietas, kur lietotājs izmeklē noziegumus, pieņem lēmumus un mēģina atrast vainīgo.
 
-Kā lietotājs mijiedarbosies ar programmu?
-Lietotājs mijiedarbosies ar Telegram botu, izmantojot čata ziņas un izvēles pogas (InlineKeyboard), kā arī dažos gadījumos ievadot savu tekstu (piemēram, vārdu).
+📌 Kādu problēmu šis projekts risina?
 
-Kādas ir 3–5 galvenās funkcijas (must-have)?
+Šis projekts nodrošina izklaidējošu un domāšanu attīstošu vidi, kur lietotāji trenē loģiku, analītisko domāšanu un lēmumu pieņemšanu, vienlaikus izbaudot interaktīvu stāstu.
 
-👶 Dzīves sākums — lietotājs ievada savu vārdu un sāk dzīvi no dzimšanas
-🔄 Lēmumu sistēma — katrā dzīves posmā lietotājs izvēlas darbības (piemēram, runāt, ignorēt, mācīties, strādāt)
-📊 Statistikas sistēma — tiek sekots līdzi rādītājiem (nauda, veselība, laime, sociālās attiecības)
-🎭 Nejauši notikumi — bots ģenerē dažādas dzīves situācijas (skola, darbs, attiecības)
-📜 Dzīves kopsavilkums — spēles beigās bots izveido unikālu lietotāja dzīves stāstu
+📌 Kas būs šī rīka galvenais lietotājs?
+
+Pusaudži un jaunieši (13–19 gadi), kuriem patīk:
+
+detektīvu stāsti
+mīklas
+spēles ar izvēlēm
+📌 Kā lietotājs mijiedarbosies ar programmu?
+
+Lietotājs:
+
+komunicē ar Telegram botu
+izvēlas opcijas ar Inline pogām
+dažreiz ievada atbildes (piemēram, mīklas, kodus)
+🔑 Galvenās funkcijas (must-have)
+
+🕵️ Lietas sākums — bots ģenerē unikālu noziegumu (vieta, aizdomās turamie, motīvs)
+
+🔄 Izvēļu sistēma — lietotājs izvēlas, ko darīt (iztaujāt, meklēt, analizēt pierādījumus)
+
+🧩 Mīklas un pavedieni — jāatrisina uzdevumi, lai iegūtu informāciju
+
+🎲 Nejauši notikumi — katra spēle atšķiras (citi scenāriji, twisti)
+
+🏁 Lietas atrisinājums — lietotājs izvēlas vainīgo un saņem rezultātu
 
 ✅ Funkcionālās prasības (5)
-
-Sistēma ļauj lietotājam ievadīt sākuma informāciju (piemēram, vārdu).
-Bots ģenerē dažādus dzīves notikumus, balstoties uz lietotāja vecumu un iepriekšējiem lēmumiem.
-Lietotājs var izvēlēties starp vairākām darbībām katrā situācijā.
-Sistēma saglabā lietotāja progresu un statistiku (piemēram, vecumu, naudu, laimi).
-Spēles beigās sistēma ģenerē lietotāja dzīves kopsavilkumu.
-
+Sistēma ģenerē unikālu detektīva lietu katram spēlētājam.
+Lietotājs var izvēlēties darbības katrā spēles posmā.
+Bots piedāvā mīklas vai uzdevumus, kas jāatrisina.
+Sistēma saglabā lietotāja progresu (kurā posmā viņš ir).
+Spēles beigās tiek sniegts rezultāts (vai lieta atrisināta pareizi).
 ⚙️ Nefunkcionālās prasības (3)
+Sistēmai jāatbild ātri (1–2 sekunžu laikā).
+Botam jāspēj apkalpot vairākus lietotājus vienlaikus.
+Datiem jābūt droši saglabātiem (JSON / SQLite).
+⭐ Novērtējums
+📊 Cik ļoti aizrauj šī tēma?
 
-Sistēmai jādarbojas ātri un bez aiztures, nodrošinot atbildes 1–2 sekunžu laikā.
-Botam jāspēj apstrādāt vairākus lietotājus vienlaicīgi.
-Datu saglabāšanai jābūt stabilai un drošai (izmantojot JSON vai līdzīgu formātu).
-Cik ļoti aizrauj šī tēma?
-5/5 — ļoti interesanti, spēles tipa projekts, piesaista uzmanību
+5/5 — detektīvu spēles vienmēr ir interesantas un “hooking”
 
-Cik viegli realizējama?
-2/5 — diezgan grūta (daudz loģikas, eventu, datu struktūru)
+⚙️ Cik viegli realizējama?
 
-Vai programma ir noderīga/saistoša?
-4/5 — vairāk izklaide, bet ar “domāšanas” vērtību
+3/5 — vidēji grūta
+(grūtāk nekā vienkāršs bots, bet vieglāk nekā pilns simulators)
 
-Vai atbilst vērtēšanas kritērijiem?
+🎮 Vai programma ir noderīga/saistoša?
+
+5/5 — ļoti aizraujoša, attīsta loģiku
+
+📋 Vai atbilst vērtēšanas kritērijiem?
+
 5/5 — ir:
 
 loģika
 datu struktūras
 interaktivitāte
 sarežģītība
+🎤 Cik efektīgi var nodemonstrēt?
 
-Cik efektīgi var nodemonstrēt?
-5/5 — ļoti iespaidīgi (viens no labākajiem demonstrācijas tipiem)
+5/5 — ļoti iespaidīgi:
 
-👉 Kopā: 21/25
-1. BitLife
-📱 Kā tas strādā:
-Teksta veida dzīves simulators
-Sākas ar piedzimšanu
-Lietotājs izvēlas darbības (skola, darbs, attiecības)
-Katra izvēle ietekmē dzīvi
+vari “live” spēlēt
+parādīt dažādus endingus
+demonstrēt random ģenerāciju
 
-👉 Ļoti līdzīgs tavai idejai
+👉 Kopā: 23/25 (pat labāks par life simulatoru demo ziņā)
+
+🎮 Līdzīgas programmas
+1. "Criminal Case"
+
+📱 Kā strādā:
+
+izmeklē noziegumus
+meklē pierādījumus
+analizē aizdomās turamos
 
 ✅ Plusi:
-Ļoti vienkāršs un saprotams interfeiss
-Daudz izvēļu un nejaušu notikumu
-Augsta “replay value” (vari spēlēt daudzas reizes)
-Aizraujošs un ātrs gameplay
+
+interesanti stāsti
+daudz lietu
+progresija
+
 ❌ Mīnusi:
-Daudzas funkcijas ir aiz maksas (paywall)
-Daudz reklāmu, kas traucē spēlēšanu
-Spēle var kļūt vienveidīga pēc laika
-Ierobežota personalizācija
-🧠 Lietojamība:
-Ļoti viegli lietot
-Piemērots mobilajām ierīcēm
-Intuitīvs (nav jāmācās)
-2. AltLife
-📱 Kā tas strādā:
-Teksta dzīves simulators līdzīgs BitLife
-Vairāk fokuss uz karjeru, attiecībām un finansēm
+
+atkārtojas
+maz brīvības izvēlēs
+2. "Detective Grimoire"
+
+📱 Kā strādā:
+
+stāsta balstīta detektīva spēle
+sarunas ar personāžiem
+mīklas
+
 ✅ Plusi:
-Dziļāka ekonomikas un karjeras sistēma
-Daudz dažādu dzīves scenāriju
-Lielāka brīvība izvēlēs
-Mazāk agresīva monetizācija
+
+spēcīgs story
+unikāli personāži
+
 ❌ Mīnusi:
-Mazāk populārs → mazāk funkciju/atjauninājumu
-Dažreiz mazāk polished (vienkāršāks dizains)
-Mazāk satura nekā konkurentiem
 
-man vajag lai tu apkopotu šo ideju tā lai claude ai varētu man uztaisīt pilnība gatvau kodu, tā lai tur būtu gan attiecības, kāzas, bērni, bēres vecāki, ģimene, māsas, brāļi sava dzimuma izvēle, vārda izvēle, lai varētu izjust visu dzīvi, lai 1 gads būtu 10 minūtes utt, lai būtu profesijas izvēle, darba izvele, macibu izvele, lai butu reala dzive, piemeram vel, pameginat kaut ko, piemeram cigareti alkoholu utt, laino manas izveles butu atkariga stasta varonu attieksme pret mani, lai cilveki saglabatos sarakstos, piemeram, ja ir māsa tad ta radas ne tikai sākuma, bet ari, piemeram stasta vidu vai beigas, lai butu dazadas izvelnes tadas ka, piemeram izveleties skolu, universitati, ka ari iet stradat vai pamest macibas un tam lidzigo, lai claude ai uzreiz visu saprastu un konkreti man uzrakstitu tiesi to ko es gribu, ka ari lai kodu varetu papildinat nakotne, lai ari pastasta ka kur un ko darit, lai butu izmantotas bibliotekas lai butu izmantoti saraksti utt, lai butu telegram mini app, ar emodzijiem, piemera, ja ir berns tad 👶un tam lidzigs, lai butu interface, lai butu naudas status, veselibas status, lai butu socialais status, blakus uzrakstits vards, lai varetu redzet atseviska loga dzives vesturi, pa posmiem, lai butu dzives status, gimenes koks, pilnigi konkreti plasi apraksti jedzigi, lai claude ai saprastu un izdotu man pilniba gatavu kodu miniapp lietotnei telegram , lai butu ari instrukcija ka un kur ko likt un darit
+lineāra spēle
+maz replay value
+💡 Kāpēc tava ideja ir labāka
 
-man vajag lai tu apkopotu šo ideju tā lai claude ai varētu man uztaisīt pilnība gatvau kodu, tā lai tur būtu gan attiecības, kāzas, bērni, bēres vecāki, ģimene, māsas, brāļi sava dzimuma izvēle, vārda izvēle, lai varētu izjust visu dzīvi, lai 1 gads būtu 10 minūtes utt, lai būtu profesijas izvēle, darba izvele, macibu izvele, lai butu reala dzive, piemeram vel, pameginat kaut ko, piemeram cigareti alkoholu utt, laino manas izveles butu atkariga stasta varonu attieksme pret mani, lai cilveki saglabatos sarakstos, piemeram, ja ir māsa tad ta radas ne tikai sākuma, bet ari, piemeram stasta vidu vai beigas, lai butu dazadas izvelnes tadas ka, piemeram izveleties skolu, universitati, ka ari iet stradat vai pamest macibas un tam lidzigo, lai claude ai uzreiz visu saprastu un konkreti man uzrakstitu tiesi to ko es gribu, ka ari lai kodu varetu papildinat nakotne, lai ari pastasta ka kur un ko darit, lai butu izmantotas bibliotekas lai butu izmantoti saraksti utt, lai butu telegram mini app, ar emodzijiem, piemera, ja ir berns tad 👶un tam lidzigs, lai butu interface, lai butu naudas status, veselibas status, lai butu socialais status, blakus uzrakstits vards, lai varetu redzet atseviska loga dzives vesturi, pa posmiem, lai butu dzives status, gimenes koks, pilnigi konkreti plasi apraksti jedzigi, lai claude ai saprastu un izdotu man pilniba gatavu kodu miniapp lietotnei telegram , lai butu ari instrukcija ka un kur ko likt un darit
+Tavs bots:
+
+🔀 katru reizi ģenerē jaunu lietu
+🎲 ir random elementi
+🤖 ir interaktīvs čatā
+⚡ ātrs un vienkārši pieejams (Telegram)
