@@ -1,0 +1,9 @@
+from ai.client import ask_ai
+
+def generate_npc(name):
+    return {
+        "name": name,
+        "persona": ask_ai(
+            f"Tu esi NPC {name}. Izveido īsu personību un slepenu noslēpumu."
+        )
+    }

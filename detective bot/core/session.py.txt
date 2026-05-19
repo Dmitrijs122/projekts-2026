@@ -1,0 +1,7 @@
+from storage.db import load_users, save_users
+
+def get_users():
+    return load_users()
+
+def update_users(users):
+    save_users(users)

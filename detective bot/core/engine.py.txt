@@ -1,0 +1,12 @@
+from ai.case_builder import generate_case
+from ai.npc_builder import generate_npc
+
+def create_game():
+    return {
+        "case": generate_case(),
+        "npcs": {
+            "A": generate_npc("Jānis"),
+            "B": generate_npc("Anna"),
+            "C": generate_npc("Mārtiņš")
+        }
+    }

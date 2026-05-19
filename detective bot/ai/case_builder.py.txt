@@ -1,0 +1,11 @@
+from ai.client import ask_ai
+import random
+
+def generate_case():
+    return {
+        "story": ask_ai(
+            "Izveido detektīva lietu: slepkavība, tumša atmosfēra, 3 aizdomās turamie, 1 noslēpums."
+        ),
+        "killer": random.choice(["A", "B", "C"]),
+        "clue": ask_ai("Izveido vienu svarīgu pavedienu detektīva lietai.")
+    }

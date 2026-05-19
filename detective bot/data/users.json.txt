@@ -1,0 +1,33 @@
+{
+  "5269290119": {
+    "state": {
+      "progress": 0,
+      "stress": 0,
+      "trust": 50,
+      "case": null,
+      "npcs": {},
+      "evidence": []
+    },
+    "game": {
+      "case": {
+        "story": "AI ERROR: {\"error\":{\"message\":\"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.\",\"type\":\"invalid_request_error\",\"code\":\"model_decommissioned\"}}\n",
+        "killer": "C",
+        "clue": "AI ERROR: {\"error\":{\"message\":\"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.\",\"type\":\"invalid_request_error\",\"code\":\"model_decommissioned\"}}\n"
+      },
+      "npcs": {
+        "A": {
+          "name": "J\u0101nis",
+          "persona": "AI ERROR: {\"error\":{\"message\":\"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.\",\"type\":\"invalid_request_error\",\"code\":\"model_decommissioned\"}}\n"
+        },
+        "B": {
+          "name": "Anna",
+          "persona": "AI ERROR: {\"error\":{\"message\":\"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.\",\"type\":\"invalid_request_error\",\"code\":\"model_decommissioned\"}}\n"
+        },
+        "C": {
+          "name": "M\u0101rti\u0146\u0161",
+          "persona": "AI ERROR: {\"error\":{\"message\":\"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.\",\"type\":\"invalid_request_error\",\"code\":\"model_decommissioned\"}}\n"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+def new_player():
+    return {
+        "progress": 0,
+        "stress": 0,
+        "trust": 50,
+        "case": None,
+        "npcs": {},
+        "evidence": []
+    }

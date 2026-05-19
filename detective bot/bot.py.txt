@@ -1,0 +1,243 @@
+import logging
+import random
+import requests
+
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import (
+    ApplicationBuilder, CommandHandler, CallbackQueryHandler,
+    MessageHandler, filters, ContextTypes
+)
+
+from config import TOKEN, GROQ_API_KEY
+
+logging.basicConfig(level=logging.INFO)
+
+users = {}
+
+# ---------------- AI ----------------
+
+def ask_ai(prompt):
+    try:
+        url = "https://api.groq.com/openai/v1/chat/completions"
+
+        headers = {
+            "Authorization": f"Bearer {GROQ_API_KEY}",
+            "Content-Type": "application/json"
+        }
+
+        data = {
+            "model": "openai/gpt-oss-120b",
+            "messages": [
+                {"role": "system", "content": "Tu esi tumšs, reālistisks detektīva spēles AI."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+
+        r = requests.post(url, headers=headers, json=data, timeout=20)
+
+        # ja API neatgriež 200 statusu, atgriež kļūdu tekstu
+        if r.status_code != 200:
+            return f"⚠️ API ERROR:\n{r.text}"
+
+        return r.json()["choices"][0]["message"]["content"]
+
+    except Exception as e:
+        return f"⚠️ AI crash: {e}"
+
+
+# ---------------- GAME ----------------
+
+def create_case():
+    killer = random.choice(["A", "B", "C"])
+
+    return {
+        "story": ask_ai("Izveido ļoti īsu detektīva lietu (2 teikumi, tumša, skaidra)."),
+        "killer": killer,
+        "npcs": {
+            "A": {"personality": "nervozs, aizsargājas", "memory": []},
+            "B": {"personality": "mierīgs, manipulējošs", "memory": []},
+            "C": {"personality": "agresīvs, dusmīgs", "memory": []}
+        },
+        "current_npc": None,
+        "awaiting_input": False
+    }
+
+
+def npc_keyboard(npc_id):
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🧠 Alibi", callback_data="ask_alibi")],
+        [InlineKeyboardButton("😈 Spiest", callback_data="press")],
+        [InlineKeyboardButton("✍️ Rakstīt", callback_data="write")],
+        [InlineKeyboardButton("📜 Lieta", callback_data="case")],
+        [InlineKeyboardButton("🔄 Mainīt NPC", callback_data="menu")],
+        [InlineKeyboardButton("⚖️ Apsūdzēt", callback_data="accuse")]
+    ])
+
+
+def talk_to_npc(case, npc_id, player_input):
+    npc = case["npcs"][npc_id]
+
+    prompt = f"""
+Tu esi aizdomās turamais {npc_id} detektīva spēlē.
+
+Tava personība: {npc['personality']}
+
+Slepkava ir: {case['killer']} (ja tas esi tu — slēp patiesību)
+
+Iepriekšējā saruna:
+{npc['memory']}
+
+Detektīvs saka:
+{player_input}
+
+Atbildi īsi, reālistiski, kā dzīvs cilvēks.
+"""
+
+    answer = ask_ai(prompt)
+
+    npc["memory"].append(f"DET: {player_input}")
+    npc["memory"].append(f"{npc_id}: {answer}")
+
+    return answer
+
+
+# ---------------- START ----------------
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = str(update.effective_user.id)
+
+    await update.message.reply_text("⏳ Ģenerē lietu...")
+
+    case = create_case()
+    users[user] = case
+
+    keyboard = [
+        [InlineKeyboardButton("🔍 Sākt izmeklēšanu", callback_data="menu")]
+    ]
+
+    await update.message.reply_text(case["story"], reply_markup=InlineKeyboardMarkup(keyboard))
+
+
+# ---------------- HANDLER ----------------
+
+async def handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    q = update.callback_query
+    await q.answer()
+
+    user = str(q.from_user.id)
+    case = users.get(user)
+
+    # ja lieta neeksistē, pārtrauc un liek lietot /start
+    if not case:
+        await q.edit_message_text("❌ Nav aktīvas lietas. /start")
+        return
+
+    # ---- MENU ----
+    # atver galveno izvēlni ar visām darbībām
+    if q.data == "menu":
+        keyboard = [
+            [InlineKeyboardButton("📜 Skatīt lietu", callback_data="case")],
+            [InlineKeyboardButton("👤 NPC A", callback_data="npc_A")],
+            [InlineKeyboardButton("👤 NPC B", callback_data="npc_B")],
+            [InlineKeyboardButton("👤 NPC C", callback_data="npc_C")],
+            [InlineKeyboardButton("⚖️ Apsūdzēt", callback_data="accuse")]
+        ]
+
+        await q.edit_message_text("Izvēlies, ko darīt:", reply_markup=InlineKeyboardMarkup(keyboard))
+
+    # ---- VIEW CASE ----
+    # parāda lietas stāstu
+    elif q.data == "case":
+        await q.edit_message_text(
+            f"📜 LIETA:\n\n{case['story']}",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🔙 Atpakaļ", callback_data="menu")]
+            ])
+        )
+
+    # ---- ENTER NPC ----
+    # lietotājs izvēlas konkrētu NPC sarunai
+    elif "npc_" in q.data:
+        npc_id = q.data.split("_")[1]
+        case["current_npc"] = npc_id
+
+        await q.edit_message_text(
+            f"Tu runā ar {npc_id}. Ko darīt?",
+            reply_markup=npc_keyboard(npc_id)
+        )
+
+    # ---- PRESET QUESTIONS ----
+    # jautājums par alibi
+    elif q.data == "ask_alibi":
+        npc = case["current_npc"]
+        response = talk_to_npc(case, npc, "Kur tu biji slepkavības laikā?")
+        await q.edit_message_text(response, reply_markup=npc_keyboard(npc))
+
+    # spiešana uz NPC, lai atklāj patiesību
+    elif q.data == "press":
+        npc = case["current_npc"]
+        response = talk_to_npc(case, npc, "Tu kaut ko slēp. Pasaki patiesību.")
+        await q.edit_message_text(response, reply_markup=npc_keyboard(npc))
+
+    # ---- CUSTOM INPUT ----
+    # ieslēdz lietotāja brīvo jautājumu režīmu
+    elif q.data == "write":
+        case["awaiting_input"] = True
+        await q.edit_message_text("✍️ Raksti savu jautājumu:")
+
+    # ---- ACCUSE ----
+    # atver apsūdzēšanas izvēlni
+    elif q.data == "accuse":
+        keyboard = [
+            [InlineKeyboardButton("A", callback_data="accuse_A")],
+            [InlineKeyboardButton("B", callback_data="accuse_B")],
+            [InlineKeyboardButton("C", callback_data="accuse_C")],
+            [InlineKeyboardButton("🔙 Atpakaļ", callback_data="menu")]
+        ]
+
+        await q.edit_message_text("Ko apsūdzēt?", reply_markup=InlineKeyboardMarkup(keyboard))
+
+    # izvēlas, kuru NPC apsūdz
+    elif "accuse_" in q.data:
+        accused = q.data.split("_")[1]
+
+        # pārbauda vai izvēlētais NPC ir slepkava
+        if accused == case["killer"]:
+            text = "✅ Tu atrisināji lietu. Slepkava salūza."
+        else:
+            text = f"❌ Nepareizi. Slepkava bija {case['killer']}."
+
+        await q.edit_message_text(text)
+        users[user] = None
+
+
+# ---------------- TEXT INPUT ----------------
+
+async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = str(update.effective_user.id)
+    case = users.get(user)
+
+    # ignorē ziņojumu, ja nav aktīvas lietas vai nav rakstīšanas režīma
+    if not case or not case.get("awaiting_input"):
+        return
+
+    case["awaiting_input"] = False
+
+    npc = case["current_npc"]
+    player_text = update.message.text
+
+    response = talk_to_npc(case, npc, player_text)
+
+    await update.message.reply_text(response, reply_markup=npc_keyboard(npc))
+
+
+# ---------------- RUN ----------------
+
+app = ApplicationBuilder().token(TOKEN).build()
+
+app.add_handler(CommandHandler("start", start))
+app.add_handler(CallbackQueryHandler(handler))
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
+
+print("🚀 BOT RUNNING (WITH CASE VIEW)")
+app.run_polling()
